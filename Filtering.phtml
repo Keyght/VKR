@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поддержка предоставления услуг телефонной связи</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<?php require('ConnectDB.php'); ?>
+<div id="page">
+    <div id="header">
+        <div id="nav">
+            <div class="navItemDiv"><form><button type="submit" class="navItem" formaction="Analize.html">Анализ по предпочтениям</button></form></div>
+            <div class="navItemDiv"><button class="navItem" data-modal-target="#modal">Учёт и фильтр &triangledown;</button></div>
+            <div class="modal" id="modal">
+                <ul>
+                    <li><a href="Inserting.html">Добавление</a></li>
+                    <li><a href="Deleting.html">Удаление</a></li>
+                    <li><a href="Updating.html">Обновление</a></li>
+                    <li><a href="Selecting.phtml">Просмотр</a></li>
+                    <li><a href="Filtering.phtml">Фильтрация</a></li>
+                </ul>
+            </div>
+            <div id="overlay"></div>
+            <div class="navItemDiv"><form><button class="navItem" formaction="BillingConnect.html">Переход в биллинговую систему</button></form></div>
+            <div class="navItemDiv"><form><button class="navItem" formaction="Reports.html">Создание отчётов</button></form></div>
+        </div>
+        <h1>Поддержка предоставления услуг телефонной связи</h1>
+    </div>
+    <p style = 'text-align:center; margin: 0 auto;'>Фильтрация данных </p>
+    <div id="middle" style="width: 500px; height: 820px; margin-left: -150px; margin-top: -10px;">
+        <div id="add">
+
+            <form method="post" id="filtr_form" style="text-align: left;">
+                <p class="select_table">Выберите поля для фильтрации</p>
+                <input type="text" placeholder="Введите номер предоставления услуг" name="number_usl" class="checkInput" id="number_usl"><br>
+                <input type="text" placeholder="Введите сотрудника" name="rabotnik" class="checkInput" id="rabotnik"><br>
+                <input type="text" placeholder="Введите клиента" name="klient" class="checkInput" id="klient"><br>
+
+				<p class="select_table">Выберите оператора</p>
+                <input type="checkbox" name="Tele2" value="Tele2" class="checkBox" id="Tele2">Теле2<br>
+                <input type="checkbox" name="MTC" value="MTC" class="checkBox" id="MTC">МТС<br>
+                <input type="checkbox" name="Tis-dialog" value="dialog" class="checkBox" id="dialog">Тис-диалог<br>
+
+                <p class="select_table">Выберите Тариф</p>
+                <input type="checkbox" name="Tarifiche" value="Tarifiche" class="checkBox" id="Tarifiche">Тарифище<br>
+                <input type="checkbox" name="City" value="City" class="checkBox" id="City">Городской<br>
+                <input type="checkbox" name="Derevhya" value="Derevhya" class="checkBox" id="Derevhya">Деревенский<br>
+                <input type="checkbox" name="SvG" value="SvG" class="checkBox" id="SvG">Связь G<br>
+
+                <p class="select_table">Выберите отдельную услугу</p>
+                <input type="checkbox" name="Internet" value="Internet" class="checkBox" id="Internet">Интернет<br>
+                <input type="checkbox" name="SMS" value="SMS" class="checkBox" id="SMS">СМС<br>
+                <input type="checkbox" name="Calls" value="Calls" class="checkBox" id="Calls">Звонки<br>
+
+                <input type="submit" name="type[filtr_button]"  id="filtr_button" value="Найти" style="margin-top: 20px; width: 360px; margin-left: -20px;">
+            </form>
+        </div>
+    </div>
+    <script src="Modals.js"></script>
+    <div id="righter">
+        <?php>require_once('Filtering.php');?>
+    </div>
+</div>
+</body>
+</html>

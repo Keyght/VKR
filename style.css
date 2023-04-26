@@ -1,0 +1,235 @@
+@font-face {
+    font-family: Shancallunaregular;
+    src: url(Shancallunaregular.ttf);
+}
+
+
+#page{
+    width: 80%;
+    height: 80%;
+    min-height: 300px;
+    background: #3DACDA;
+    margin: 0 auto;
+    margin-top: -22px;
+    margin-bottom: -10px;
+    color: white;
+}
+body {
+    background: #3DACDA;
+    alignment: center;
+    font-family: Shancallunaregular,sans-serif;
+}
+#header {
+    text-align: center;
+}
+h1 {
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+ul {
+    float:right;
+    list-style-type: none;
+    height: 60px;
+    margin: 0 auto;
+    color: white;
+
+}
+li {
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 40px;
+    position: relative;
+    transform: translateY(80%);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+p {
+    font-size: 18px;
+    text-align: center;
+}
+.select_table {
+    font-size: 15px;
+    text-align: left;
+}
+
+select {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+}
+
+#rep_select {
+    width: 505px;
+    height: 44px;
+}
+
+.dropbox {
+    margin-right:50px;
+    margin-left:50px;
+    width: 508px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+#add {
+    padding-left: 50px;
+}
+#delete {
+    padding-left: 50px;
+}
+#update {
+    padding-left: 50px;
+}
+#look {
+    padding-left: 50px;
+}
+#add_dogovor {
+    float: right;
+    position: absolute;
+    margin-top: -41px;
+    margin-left: 500px;
+}
+
+#add_client {
+    float: right;
+    position: absolute;
+    margin-top: -41px;
+    margin-left: 500px;
+}
+
+input {
+    margin-right:50px;
+    margin-left:50px;
+    width: 500px;
+    height: 40px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.checkBox {
+    width: 20px;
+    height: 20px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+}
+.checkInput {
+    width: 350px;
+    height: 30px;
+    margin-left: -15px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: white;
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#look_button {
+    margin-top: 20px;
+    margin-left: 0px;
+    width: 300px;
+}
+
+.navItem {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.navItemDiv {
+    margin-bottom: 20px;
+    width:25%;
+    max-height: 80px;
+    float:left;
+}
+
+.analizeResDiv {
+    margin: 50px;
+    width: 25%;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.clientBut {
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+#resLeft {
+    margin-left: 300px;
+    float: left;
+}
+
+#resRight {
+    margin-right: 300px;
+    float: right;
+}
+
+.pad {
+    height: 75px;
+}
+
+.analizeResInner {
+    width:60%;
+    height: 70%;
+    margin: 0 auto;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.hidden_div {
+    float: right;
+    position: absolute;
+    margin-top: -41px;
+    margin-left: 500px;
+}
+
+.modal {
+    position: fixed;
+    left: 33%;
+    top: 8%;
+    transform: scale(0);
+    transition: 200ms ease-in-out;
+    border: 3px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #3DACDA;
+    width: 200px;
+    height: 150px;
+    max-width: 50%;
+}
+
+.modal.active {
+    transform: scale(1);
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 200ms ease-in-out;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}

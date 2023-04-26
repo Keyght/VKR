@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поддержка предоставления услуг телефонной связи</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<?php require_once('ConnectDB.php'); ?>
+<div id="page">
+    <div id="header">
+        <div id="nav">
+            <div class="navItemDiv"><form><button type="submit" class="navItem" formaction="Analize.html">Анализ по предпочтениям</button></form></div>
+            <div class="navItemDiv"><button class="navItem" data-modal-target="#modal">Учёт и фильтр &triangledown;</button></div>
+            <div class="modal" id="modal">
+                <ul>
+                    <li><a href="Inserting.html">Добавление</a></li>
+                    <li><a href="Deleting.html">Удаление</a></li>
+                    <li><a href="Updating.html">Обновление</a></li>
+                    <li><a href="Selecting.phtml">Просмотр</a></li>
+                    <li><a href="Filtering.phtml">Фильтрация</a></li>
+                </ul>
+            </div>
+            <div id="overlay"></div>
+            <div class="navItemDiv"><form><button class="navItem" formaction="BillingConnect.html">Переход в биллинговую систему</button></form></div>
+            <div class="navItemDiv"><form><button class="navItem" formaction="Reports.html">Создание отчётов</button></form></div>
+        </div>
+        <h1>Поддержка предоставления услуг телефонной связи</h1>
+    </div>
+    <div id="middle">
+        <p style="margin-top: 75px; font-size: 32px">Карточка клиента</p>
+        <form method="post" action="Client.php" style="margin: auto; text-align: center">
+            <input class="clientBut" type="text" placeholder="Фамилия" name="surname">
+            <input class="clientBut" type="text" placeholder="Имя" name="name"><br>
+            <input class="clientBut" type="text" placeholder="Отчество" name="lastname">
+            <input class="clientBut" type="text" placeholder="Телефон" name="telf"><br>
+            <input class="clientBut" type="text" placeholder="Адрес" name="address" style="width: 716px;"><br>
+            <input class="clientBut" type="submit" name="type[create_dog]"  id="create_dog" value="Договор" style="width: 716px;"><br>
+            <input class="clientBut" type="submit" name="type[create_client]"  id="create_client" value="&plus;" style="width: 40px;"><br>
+        </form>
+
+    </div>
+    <script src="Modals.js"></script>
+    <div id="footer">
+
+    </div>
+</div>
+
+</body>
+</html>

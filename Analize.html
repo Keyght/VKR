@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поддержка предоставления услуг телефонной связи</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<?php require_once('ConnectDB.php'); ?>
+<div id="page">
+    <div id="header">
+        <div id="nav">
+            <div class="navItemDiv"><form><button type="submit" class="navItem" formaction="Analize.html">Анализ по предпочтениям</button></form></div>
+            <div class="navItemDiv"><button class="navItem" data-modal-target="#modal">Учёт и фильтр &triangledown;</button></div>
+            <div class="modal" id="modal">
+                <ul>
+                    <li><a href="Inserting.html">Добавление</a></li>
+                    <li><a href="Deleting.html">Удаление</a></li>
+                    <li><a href="Updating.html">Обновление</a></li>
+                    <li><a href="Selecting.phtml">Просмотр</a></li>
+                    <li><a href="Filtering.phtml">Фильтрация</a></li>
+                </ul>
+            </div>
+            <div id="overlay"></div>
+            <div class="navItemDiv"><form><button class="navItem" formaction="BillingConnect.html">Переход в биллинговую систему</button></form></div>
+            <div class="navItemDiv"><form><button class="navItem" formaction="Reports.html">Создание отчётов</button></form></div>
+        </div>
+        <h1>Поддержка предоставления услуг телефонной связи</h1>
+    </div>
+    <div id="middle">
+        <p style="margin-top: 75px; font-size: 32px">Анализ по предпочтениям клиента</p>
+        <form method="post" action="Analize.php" style="margin: auto; text-align: center">
+            <input type="text" placeholder="Интернет не больше" name="inet"><br>
+            <input type="text" placeholder="Звонки не больше" name="calls"><br>
+            <input type="text" placeholder="СМС не больше" name="sms"><br>
+            <input type="checkbox" name="adds" value="adds" class="checkBox" id="adds" style="margin-left: -254px; margin-bottom: 15px">Дополнительные услуги<br>
+            <input type="submit" name="analize_butt"  id="analize_butt" value="Провести подбор" style="width: 508px;"><br>
+        </form>
+
+    </div>
+    <script src="Modals.js"></script>
+    <div id="footer">
+
+    </div>
+</div>
+
+</body>
+</html>
