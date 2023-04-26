@@ -2,7 +2,7 @@
 error_reporting(0);
 
 if (array_keys($_POST['type'])[0]=='filtr_button') {
-    require('ConnectDB.php');
+    require_once('ConnectionDBModule/ConnectDB.php');
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
 
     if ($conn->connect_error) {

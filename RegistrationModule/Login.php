@@ -27,5 +27,5 @@ if (array_keys($_POST['type'])[0]=='login_butt') {
 }
 
 if (array_keys($_POST['type'])[0]=='register_butt') {
-    include('index.html');
+    include('Registration.html');
 }

@@ -6,7 +6,7 @@ class UserReg {
     private $conn;
     // constructor
     function __construct() {
-        require_once 'DBConnection.php';
+        require 'ConnectionDBModule/DBConnection.php';
         // connecting to database
         $db = new DBConnection();
         $this->conn = $db->connect();

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Поддержка предоставления услуг телефонной связи</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-<?php require('ConnectDB.php'); ?>
+<?php require('ConnectionDBModule/ConnectDB.php'); ?>
 <div id="page">
     <div id="header">
         <div id="nav">
@@ -57,9 +57,9 @@
             </form>
         </div>
     </div>
-    <script src="Modals.js"></script>
+    <script src="../Modals.js"></script>
     <div id="righter">
-        <?php>require_once('Filtering.php');?>
+        <?php> require_once('Filtering.php');?>
     </div>
 </div>
 </body>

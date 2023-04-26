@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Поддержка предоставления услуг телефонной связи</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-<?php require_once('ConnectDB.php'); ?>
+<?php require_once('ConnectionDBModule/ConnectDB.php'); ?>
 <div id="page">
     <div id="header">
         <div id="nav">
@@ -50,7 +50,7 @@
                     <option value="users">Пользователи</option>
                 </select><br>
                 <input type="submit" name="type[look_send]"  id="look_button" value="Отобразить данные из таблицы">
-                <script src="Modals.js"></script>
+                <script src="../Modals.js"></script>
                 <meta charset="UTF-8">
                 <?php require_once('Selecting.php'); ?>
             </form>

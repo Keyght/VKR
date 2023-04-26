@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <?php
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
-
+require_once('ConnectionDBModule/ConnectDB.php');
 if ($conn->connect_error) {
     printf("Соединение не удалось: %s\n", $conn->connect_error);
     include('ErrorPage.html');
